@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click, Click, BOOM 💥</title>
+  <link rel="icon" href="https://fav.farm/💣">
+  <style>
+    table {
+      background-color: #450084;
+      min-width: 25rem;
+      min-height: 25rem;
+    }
+
+    td {
+      background-color: wheat;
+      border: 0.25rem solid #8EE4D7 ;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tbody>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- Click3.wav by EdgardEdition -- https://freesound.org/s/113093/ -- License: Attribution 3.0 -->
+  <audio id="click" src="113093__edgardedition__click3.wav"></audio>
+
+  <!-- Boom_C_02 by cabled_mess -- https://freesound.org/s/350975/ -- License: Creative Commons 0 -->
+  <audio id="boom" src="350975__cabled_mess__boom_c_02.wav"></audio>
+  <script>
+    let clickCount = 0;
+    const clickSound = document.getElementById('click')
+    const boomSound = document.getElementById('boom')
+    let lastSound = clickSound;
+
+    // TODO: 1 - make it such that if any table cell is clicked, the onClick function below is executed
+
+    function onClick(ev) {
+      lastSound.pause()
+      lastSound.currentTime = 0;
+      clickCount++
+      if (clickCount % 3 == 0) {
+        // boom
+        boomSound.play();
+        lastSound = boomSound
+      } else {
+        clickSound.play();
+        lastSound = clickSound
+      }
+
+      console.log(`ev in onClick ${ev}`)
+      // TODO: 2 - REMOVE THE TABLE CELL THAT WAS CLICKED
+
+    }
+  </script>
+</body>
+</html>
