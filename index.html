@@ -16,6 +16,10 @@
       background-color: wheat;
       border: 0.25rem solid #8EE4D7 ;
     }
+
+    .odd td {
+      background-color: #333333;
+    }
   </style>
 </head>
 <body>
@@ -169,9 +173,8 @@
         lastSound = clickSound
       }
 
-      console.log(`ev in onClick ${ev}`)
+      console.log('ev in onClick', ev)
       // TODO: 2 - REMOVE THE TABLE CELL THAT WAS CLICKED
-
     }
   </script>
 </body>
